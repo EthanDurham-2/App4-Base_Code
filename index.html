@@ -94,9 +94,153 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Sprain or Fracture?</h1>
+</div>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have an ankle sprain but wonder if it could be a fracture? Answer a few short questions to help you find out!</p>
 	
+	<!--Button to Start the App-->
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+
+<!--Page/Question 1 Content Below-->
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		<p>Are you able to bear weight on your ankle?</p> <!--Question 1-->
+			<!--Create Yes and No buttons for user to press in response to the question-->
+			<!--Regardless of answer choice, send user to next page-->
+			<a href="#two" class="w3-btn w3-grey w3-round" onclick="sprainAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to sprain count-->
+			<a href="#two" class="w3-btn w3-grey w3-round" onclick="fractureAdd()"> No </a>
+			<!--If user selects No to this question, add one to fracture count-->
+    	</div>
+</div>
+<!--End of Page 1-->
+
+<!--Page/Question 2 Content Below-->
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Upon time of injury, was the swelling and bruising immediately obvious?</p> <!--Question 2-->
+			<!--Create Yes and No buttons for user to press in response to the question-->
+			<!--Regardless of answer choice, send user to next page-->
+			<a href="#three" class="w3-btn w3-grey w3-round" onclick="fractureAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to fracture count-->
+			<a href="#three" class="w3-btn w3-grey w3-round" onclick="sprainAdd()"> No </a>
+			<!--If user selects No to this question, add one to sprain count-->
+	</div>
+</div>	
+<!--End of Page 2-->
+	
+<!--Page/Question 3 Content Below-->
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Does your ankle currently look deformed?</p> <!--Question 3-->
+			<!--Create Yes and No buttons for user to press in response to the question-->
+			<!--Regardless of answer choice, send user to next page-->
+			<a href="#four" class="w3-btn w3-grey w3-round" onclick="fractureAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to fracture count-->
+			<a href="#four" class="w3-btn w3-grey w3-round" onclick="sprainAdd()"> No </a>
+			<!--If user selects No to this question, add one to sprain count-->
+	</div>
+</div>	
+<!--End of Page 3-->
+
+<!--Page/Question 4 Content Below-->
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is the pain mild-to-moderate (YES) or moderate-to-severe (NO)?</p> <!--Question 4-->
+			<!--Create Yes and No buttons for user to press in response to the question-->
+			<!--Regardless of answer choice, send user to next page-->
+			<a href="#five" class="w3-btn w3-grey w3-round" onclick="sprainAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to sprain count-->
+			<a href="#five" class="w3-btn w3-grey w3-round" onclick="fractureAdd()"> No </a>
+			<!--If user selects No to this question, add one to fracture count-->
+	</div>
+</div>	
+<!--End of Page 4-->
+	
+<!--Page/Question 5 Content Below (New Question for Fracture)-->
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Does your ankle feel numb?</p> <!--Question 5-->
+			<!--Create Yes and No buttons for user to press in response to the question-->
+			<!--Regardless of answer choice, send user to next page-->
+			<a href="#six" class="w3-btn w3-grey w3-round" onclick="fractureAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to cold count-->
+			<a href="#six" class="w3-btn w3-grey w3-round" onclick="sprainAdd()"> No </a>
+			<!--If user selects No to this question, add one to allergy count-->
+	</div>
+</div>	
+<!--End of Page 5-->
+	
+<!--Page/Question 6 Content Below (New Question for Allergy)-->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Was there a noise such as popping when you were first injured?</p> <!--Question 6-->
+			<!--Create Yes and No buttons for user to press in response to the question-->
+			<!--Regardless of answer choice, send user to next page-->
+			<a href="#results" class="w3-btn w3-grey w3-round" onclick="fractureAdd()"> Yes </a>
+			<!--If user selects Yes to this question, add one to allergy count-->
+			<a href="#results" class="w3-btn w3-grey w3-round" onclick="sprainAdd()"> No </a>
+			<!--If user selects No to this question, add one to cold count-->
+	</div>
+</div>	
+<!--End of Page 6-->
+	
+<!--Page 7 Content Below (Results Page)-->
+<div class="page" id="results">
+	
+	<!--Container 1 with the "Results" title-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<!--Container 2 with the Instructions for the page-->
+	<div id="content" class="w3-container">
+		<p>Click the button below to find out your results!</p>
+	</div>
+	
+	<!--Container 3 with the button for the user to press-->
+	<div id="content" class="w3-container">
+		<button onclick="getResult();"> Results </button>
+		<p id="results"></p>
+	</div>
+</div>
+<!--End of Page 7 (Results Page)-->
+	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
 </body>
+	
 </html>
