@@ -26,13 +26,17 @@ Known Issues:
 blah, blah, blah, blah
 Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
-References:
+References (code):
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+References (sprain vs. fracture):
+https://www.webmd.com/a-to-z-guides/ankle-sprain-vs-broken-ankle
+https://www.footanklecenters.com/blog/how-to-tell-the-difference-between-an-ankle-sprain-and-a-fracture
+
 -->
 	
 <head> 
-	<title>Hello World</title>  
+	<title>Ankle Injury Diagnostic App</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
@@ -64,7 +68,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var fracturePercent = (fracture_count/6)*100; //take the fracture count and divide by the total number of questons asked, then convert to percentage.
 		//create resultText variable using getElementById
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is a sprain =" + sprainPercent + "%" + "<br> Probability it is a fracture =" + fracturePercent + "%"; 		
+		resultText.innerHTML = "Probability your ankle is sprained =" + sprainPercent + "%" + "<br> Probability your ankle is fractured =" + fracturePercent + "%"; 		
         }//end of getResult
 
 </script>	
