@@ -33,7 +33,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <head> 
 	<title>Hello World</title>  
-]	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="w3-colors-flat.css">
@@ -41,7 +41,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	//initialize count variables and set to 0.
+	var sprain_count = 0;
+        var fracture_count = 0;
+	
+	//create function for adding 1 to sprain count whenever the function is called to later on in the code.
+        function sprainAdd(){
+            sprain_count = sprain_count + 1; //add one sprain count
+		alert(sprain_count); //when calling to sprainAdd, the alert will fire, denoting the count.
+        }//end of sprainAdd
+	
+	//create function for adding 1 to fracture count whenever the function is called to later on in the code.
+        function fractureAdd(){
+            fracture_count = fracture_count + 1; //add one to fracture count
+		alert(fracture_count); //when calling to fractureAdd, the alert will fire, denoting the count.
+	}//end of fractureAdd
+	
+	//create function to calculate percentage of questions that lend to allergy and cold
+	function getResult(){
+		//create calculation variables
+		var sprainPercent = (sprain_count/6)*100; //take the sprain count and divide by the total number of questons asked, then convert to percentage.
+		var fracturePercent = (fracture_count/6)*100; //take the fracture count and divide by the total number of questons asked, then convert to percentage.
+		//create resultText variable using getElementById
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is a sprain =" + sprainPercent + "%" + "<br> Probability it is a fracture =" + fracturePercent + "%"; 		
+        }//end of getResult
 
 </script>	
 
